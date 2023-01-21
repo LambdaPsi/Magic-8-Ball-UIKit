@@ -12,13 +12,15 @@ class ViewController: UIViewController {
     
 
     @IBOutlet weak var imageView: UIImageView!
+   
+
     
     @IBAction func askButtonPressed(_ sender: UIButton) {
-        imageView.image = UIImage(named: "ball3")
+        let ballArray = ["ball1", "ball2", "ball3", "ball4", "ball5"]
+        let randomBall = ballArray[Int.random(in: 0...4)]
+        imageView.image = UIImage(named: randomBall)
     }
     
-    let ballArray = [#imageLiteral(resourceName: "ball1.png"),#imageLiteral(resourceName: "ball2.png"),#imageLiteral(resourceName: "ball3.png"),#imageLiteral(resourceName: "ball4.png"),#imageLiteral(resourceName: "ball5.png")]
-
 
 
 }
